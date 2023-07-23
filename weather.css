@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(255 247 238);
+    text-align: center;
+    font-family: monospace;
+}
+
+.box {
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    background-color: rgb(149, 184, 233);
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    box-shadow: 3px 4px 7px #00000030;
+    width: 225px;
+    overflow: hidden;
+}
+
+#weather-cond {
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+
+.location {
+    margin: 7px !important;
+    text-align: center;
+}
+
+#date {
+    margin: 7px !important;
+    font-size: 11px;
+    color: #00000091;
+}
+
+.temp-min-max {
+    margin-top: 3px !important;
+    margin-bottom: 40px;
+    font-size: 11px;
+    color: #00000091;
+}
+
+.wave1 {
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: -35%;
+    background-color: rgb(255 255 255/50%);
+    width: 400px;
+    height: 400px;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave3 {
+    animation: drift 5000ms infinite linear;
+    z-index: 2;
+    opacity: 0.2;
+    top: 54%;
+    left: -35%;
+    background-color: rgb(255 255 255/54%);
+    width: 400px;
+    height: 400px;
+    border-radius: 43%;
+    position: absolute;
+}
+
+.wave2 {
+    animation: drift 7000ms infinite linear;
+    z-index: 3;
+    opacity: 0.1;
+    top: 56%;
+    left: -35%;
+    background-color: rgb(255 255 255 / 51%);
+    width: 400px;
+    height: 400px;
+    border-radius: 43%;
+    position: absolute;
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+
+@keyframes rotates {
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
